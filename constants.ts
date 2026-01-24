@@ -1,0 +1,88 @@
+
+import { Province, District, PoliticalParty } from './types';
+
+export const PROVINCES: Province[] = [
+  { id: '1', name: 'कोशी प्रदेश' },
+  { id: '2', name: 'मधेश प्रदेश' },
+  { id: '3', name: 'बागमती प्रदेश' },
+  { id: '4', name: 'गण्डकी प्रदेश' },
+  { id: '5', name: 'लुम्बिनी प्रदेश' },
+  { id: '6', name: 'कर्णाली प्रदेश' },
+  { id: '7', name: 'सुदूरपश्चिम प्रदेश' },
+];
+
+// Mapping of districts to their number of HoR constituencies
+export const DISTRICT_CONSTITUENCIES: Record<string, number> = {
+  'काठमाडौं': 10,
+  'मोरङ': 6,
+  'झापा': 5,
+  'रूपन्देही': 5,
+  'कैलाली': 5,
+  'सुनसरी': 4,
+  'धनुषा': 4,
+  'सप्तरी': 4,
+  'सिरहा': 4,
+  'महोत्तरी': 4,
+  'सर्लाही': 4,
+  'रौतहट': 4,
+  'बारा': 4,
+  'पर्सा': 4,
+  'चितवन': 3,
+  'कास्की': 3,
+  'ललितपुर': 3,
+  'काभ्रेपलाञ्चोक': 2,
+  'सिन्धुपाल्चोक': 2,
+  'नुवाकोट': 2,
+  'धादिङ': 2,
+  'मकवानपुर': 2,
+  'सिन्धुली': 2,
+  'दोलखा': 2,
+  'स्याङ्जा': 2,
+  'तनहुँ': 2,
+  'बागलुङ': 2,
+  'नवलपरासी (बर्दघाट सुस्ता पूर्व)': 2,
+  'नवलपरासी (बर्दघाट सुस्ता पश्चिम)': 2,
+  'गुल्मी': 2,
+  'अर्घाखाँची': 2,
+  'पाल्पा': 2,
+  'कपिलवस्तु': 3,
+  'दाङ': 3,
+  'बाँके': 3,
+  'बर्दिया': 2,
+  'सुर्खेत': 2,
+  'दैलेख': 2,
+  'कञ्चनपुर': 3,
+  'अछाम': 2,
+  'ताप्लेजुङ': 1, 'पाँचथर': 1, 'इलाम': 2, 'धनकुटा': 1, 'तेह्रथुम': 1, 'सङ्खुवासभा': 1, 'भोजपुर': 1, 'सोलुखुम्बु': 1, 'ओखलढुङ्गा': 1, 'खोटाङ': 1, 'उदयपुर': 2,
+  'भक्तपुर': 2, 'रसुवा': 1, 'रामेछाप': 1,
+  'लमजुङ': 1, 'गोरखा': 2, 'मनाङ': 1, 'मुस्ताङ': 1, 'म्याग्दी': 1, 'पर्वत': 1,
+  'प्युठान': 1, 'रोल्पा': 1, 'पूर्वी रुकुम': 1,
+  'जाजरकोट': 1, 'सल्यान': 1, 'डोल्पा': 1, 'जुम्ला': 1, 'कालीकोट': 1, 'मुगु': 1, 'हुम्ला': 1, 'पश्चिम रुकुम': 1,
+  'डडेल्धुरा': 1, 'डोटी': 1, 'बझाङ': 1, 'बाजुरा': 1, 'बैतडी': 1, 'दार्चुला': 1
+};
+
+export const DISTRICTS: District[] = [
+  { id: '101', provinceId: '1', name: 'ताप्लेजुङ' }, { id: '102', provinceId: '1', name: 'पाँचथर' }, { id: '103', provinceId: '1', name: 'इलाम' }, { id: '104', provinceId: '1', name: 'झापा' }, { id: '105', provinceId: '1', name: 'मोरङ' }, { id: '106', provinceId: '1', name: 'सुनसरी' }, { id: '107', provinceId: '1', name: 'धनकुटा' }, { id: '108', provinceId: '1', name: 'तेह्रथुम' }, { id: '109', provinceId: '1', name: 'सङ्खुवासभा' }, { id: '110', provinceId: '1', name: 'भोजपुर' }, { id: '111', provinceId: '1', name: 'सोलुखुम्बु' }, { id: '112', provinceId: '1', name: 'ओखलढुङ्गा' }, { id: '113', provinceId: '1', name: 'खोटाङ' }, { id: '114', provinceId: '1', name: 'उदयपुर' },
+  { id: '201', provinceId: '2', name: 'सप्तरी' }, { id: '202', provinceId: '2', name: 'सिरहा' }, { id: '203', provinceId: '2', name: 'धनुषा' }, { id: '204', provinceId: '2', name: 'महोत्तरी' }, { id: '205', provinceId: '2', name: 'सर्लाही' }, { id: '206', provinceId: '2', name: 'रौतहट' }, { id: '207', provinceId: '2', name: 'बारा' }, { id: '208', provinceId: '2', name: 'पर्सा' },
+  { id: '301', provinceId: '3', name: 'काठमाडौं' }, { id: '302', provinceId: '3', name: 'ललितपुर' }, { id: '303', provinceId: '3', name: 'भक्तपुर' }, { id: '304', provinceId: '3', name: 'काभ्रेपलाञ्चोक' }, { id: '305', provinceId: '3', name: 'सिन्धुपाल्चोक' }, { id: '306', provinceId: '3', name: 'नुवाकोट' }, { id: '307', provinceId: '3', name: 'धादिङ' }, { id: '308', provinceId: '3', name: 'रसुवा' }, { id: '309', provinceId: '3', name: 'मकवानपुर' }, { id: '310', provinceId: '3', name: 'चितवन' }, { id: '311', provinceId: '3', name: 'सिन्धुली' }, { id: '312', provinceId: '3', name: 'रामेछाप' }, { id: '313', provinceId: '3', name: 'दोलखा' },
+  { id: '401', provinceId: '4', name: 'कास्की' }, { id: '402', provinceId: '4', name: 'लमजुङ' }, { id: '403', provinceId: '4', name: 'तनहुँ' }, { id: '404', provinceId: '4', name: 'गोरखा' }, { id: '405', provinceId: '4', name: 'स्याङ्जा' }, { id: '406', provinceId: '4', name: 'नवलपरासी (बर्दघाट सुस्ता पूर्व)' }, { id: '407', provinceId: '4', name: 'मनाङ' }, { id: '408', provinceId: '4', name: 'मुस्ताङ' }, { id: '409', provinceId: '4', name: 'म्याग्दी' }, { id: '410', provinceId: '4', name: 'पर्वत' }, { id: '411', provinceId: '4', name: 'बागलुङ' },
+  { id: '501', provinceId: '5', name: 'नवलपरासी (बर्दघाट सुस्ता पश्चिम)' }, { id: '502', provinceId: '5', name: 'रूपन्देही' }, { id: '503', provinceId: '5', name: 'कपिलवस्तु' }, { id: '504', provinceId: '5', name: 'पाल्पा' }, { id: '505', provinceId: '5', name: 'अर्घाखाँची' }, { id: '506', provinceId: '5', name: 'गुल्मी' }, { id: '507', provinceId: '5', name: 'दाङ' }, { id: '508', provinceId: '5', name: 'प्युठान' }, { id: '509', provinceId: '5', name: 'रोल्पा' }, { id: '510', provinceId: '5', name: 'पूर्वी रुकुम' }, { id: '511', provinceId: '5', name: 'बाँके' }, { id: '512', provinceId: '5', name: 'बर्दिया' },
+  { id: '601', provinceId: '6', name: 'सुर्खेत' }, { id: '602', provinceId: '6', name: 'दैलेख' }, { id: '603', provinceId: '6', name: 'जाजरकोट' }, { id: '604', provinceId: '6', name: 'सल्यान' }, { id: '605', provinceId: '6', name: 'डोल्पा' }, { id: '606', provinceId: '6', name: 'जुम्ला' }, { id: '607', provinceId: '6', name: 'कालीकोट' }, { id: '608', provinceId: '6', name: 'मुगु' }, { id: '609', provinceId: '6', name: 'हुम्ला' }, { id: '610', provinceId: '6', name: 'पश्चिम रुकुम' },
+  { id: '701', provinceId: '7', name: 'कैलाली' }, { id: '702', provinceId: '7', name: 'कञ्चनपुर' }, { id: '703', provinceId: '7', name: 'डडेल्धुरा' }, { id: '704', provinceId: '7', name: 'डोटी' }, { id: '705', provinceId: '7', name: 'अछाम' }, { id: '706', provinceId: '7', name: 'बझाङ' }, { id: '707', provinceId: '7', name: 'बाजुरा' }, { id: '708', provinceId: '7', name: 'बैतडी' }, { id: '709', provinceId: '7', name: 'दार्चुला' },
+];
+
+export const PARTIES: PoliticalParty[] = [
+  { id: 'nc', name: 'नेपाली कांग्रेस' },
+  { id: 'uml', name: 'नेकपा (एमाले)' },
+  { id: 'rsp', name: 'राष्ट्रिय स्वतन्त्र पार्टी' },
+  { id: 'rpp', name: 'राष्ट्रिय प्रजातन्त्र पार्टी' },
+  { id: 'js', name: 'जनता समाजवादी पार्टी' },
+  {id:'ncp', name: ' नेपाल कम्युनिष्ट पार्टी'}, 
+  { id: 'ua', name: 'नेकपा (एकीकृत समाजवादी)' },
+  { id: 'janamat', name: 'जनमत पार्टी' },
+  { id: 'lsp', name: 'लोकतान्त्रिक समाजवादी पार्टी' },
+  { id: 'nagarik', name: 'नागरिक उन्मुक्ति पार्टी' },
+  { id: 'mc', name: 'नेकपा (माओवादी केन्द्र)' },
+  { id: 'independent', name: 'स्वतन्त्र' },
+  { id: 'other', name: 'अन्य' },
+];
